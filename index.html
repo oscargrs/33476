@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Quiz Clash of Clans</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="menu">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo_coc.png" alt="Logo do Clash of Clans">
+            </a>
+        </div>
+        <h1>Ultimate Quiz Clash of Clans</h1>
+        <div class="supercell">
+            <a href="https://supercell.com/en/games/clashofclans/">
+                <img src="images/supercell_logo.webp" alt="Logo da Supercell">
+            </a>
+        </div>
+    </header>
+
+    <main class="content">
+        <button id="start-quiz" class="start-button">Iniciar Quiz</button>
+
+        <section id="quiz-section" class="quiz hidden">
+            <h2 id="question-number" class="question-number">Pergunta 1</h2>
+            <p id="question-text" class="question-text">Pergunta genérica</p>
+            <ul id="options" class="options">
+                <li><button class="option-button">Opção 1</button></li>
+                <li><button class="option-button">Opção 2</button></li>
+                <li><button class="option-button">Opção 3</button></li>
+                <li><button class="option-button">Opção 4</button></li>
+            </ul>
+            <button id="next-button" class="next-button hidden">Próxima Pergunta</button>
+        </section>
+
+        <section id="result-section" class="result hidden">
+            <h2>Resultado Final</h2>
+            <p id="score">0/5 acertos</p>
+            <p id="feedback">Mensagem adaptada ao desempenho</p>
+            <button id="restart-button" class="restart-button">Reiniciar Quiz</button>
+        </section>
+    </main>
+
+    <div class="text-before-footer">
+        <p>Este site não tem fins lucrativos. Todos os direitos sobre o Clash of Clans pertencem à Supercell. O uso é exclusivamente para fins educacionais e recreativos.</p>
+    </div>
+
+    <footer class="progress-bar">
+        <div id="progress" class="progress"></div>
+    </footer>
+</body>
+</html>

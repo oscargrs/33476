@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 10%), url('images/scenery_background.jpg') no-repeat center center;    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    padding: 0px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.supercell {
+    margin-top: 5px;
+    width: 100px;
+    height: auto;
+}
+
+.supercell img {
+    margin-left: 35px;
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+}
+
+main.content {
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center;     /* Centraliza o conteúdo horizontalmente */
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    flex-grow: 1; /* Isso permite que o conteúdo ocupe o espaço restante */
+    min-height: 0vh; /* Adiciona uma altura mínima para evitar que o conteúdo suba muito */
+}
+
+.question-number {
+    color: white;
+    font-size: 40px;
+}
+
+.question-text {
+    color: white;
+    font-size: 20px;
+}
+
+button {
+    width: 500px;
+    height: 100px;
+    padding: 10px 20px;
+    font-size: 40px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.quiz, .result {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+ul.options {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button.option-button {
+    width: 1000px;
+    height: 60px;
+    padding: 10px;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    border: 1px solid #333;
+    background-color: #7bb9ff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button.option-button:hover {
+    background-color: #FFB948;
+}
+
+footer.progress-bar {
+    position: absolute; /* Torna a barra de progresso fixa no fundo */
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #000000;
+}
+
+footer.progress-bar div.progress {
+    height: 100%;
+    background-color: #00ff4c;
+    width: 0;
+    transition: width 0.3s;
+}
+
+.text-before-footer {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
+}
