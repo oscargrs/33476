@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 correctAnswer: 1
             },
             {
-                question: "Qual a liga mais alta que se pode alcançar do jogo?",
+                question: "Qual a liga mais alta que se pode alcançar no jogo?",
                 options: ["Bronze", "Campeão", "Cristal", "Lendária"],
                 correctAnswer: 3
             },
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 correctAnswer: 2
             },
             {
-                question: "Quem são os inimigos principais do Clash of Clans?",
+                question: "Quem são os principais inimigos do Clash of Clans?",
                 options: ["Esqueletos", "Orcs", "Trolls", "Goblins"],
                 correctAnswer: 3
             },
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 correctAnswer: 0
             },
             {
-                question: "Entre as moedas do jogo, qual é a mais recente?",
+                question: "Entre as moedas do jogo, qual foi a última a ser lançada?",
                 options: ["Ouro", "Elixir Negro", "Elixir", "Gemas"],
                 correctAnswer: 1
             }
@@ -131,10 +131,21 @@ document.addEventListener('DOMContentLoaded', () => {
         quizSection.classList.add('hidden');
         resultSection.classList.remove('hidden');
         scoreDisplay.textContent = `${score}/10 acertos`;
-        feedbackDisplay.textContent = score >= 7 ? 'Bom trabalho!' : 'Tente novamente!';
-        progressBar.style.width = '100%';
+    
+        // Adiciona a lógica de feedback conforme a pontuação
+        if (score <= 4) {
+            feedbackDisplay.textContent = 'Menção I, tente novamente!';
+        } else if (score > 4 && score < 8) {
+            feedbackDisplay.textContent = 'Menção R, você pode mais que isso!';
+        } else if (score >= 7 && score < 10) {
+            feedbackDisplay.textContent = 'Menção B, muito bem!';
+        } else if (score === 10) {
+            feedbackDisplay.textContent = 'Menção MB, parabéns você acertou tudo!';
+        }
+    
+        progressBar.style.width = '100%'; // Garante que a barra de progresso vai até 100% no final
     }
-
+    
     // Função para reiniciar o quiz
     function restartQuiz() {
         currentQuestion = 0;
